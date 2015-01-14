@@ -1,8 +1,8 @@
 <?php
 
-namespace CharlesBAP\PokemonBattle\Type;
+namespace Ankanitti\PokemonBattle\Type;
 
-use CharlesBAP\PokemonBattle\PokemonModel;
+use Ankanitti\PokemonBattle\PokemonModel;
 
 abstract class PokemonPlant extends PokemonModel
 {

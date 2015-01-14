@@ -1,7 +1,7 @@
 <?php
 
-namespace CharlesBAP\PokemonBattle;
-use CharlesBAP\PokemonBattle\Model\PokemonInterface;
+namespace Ankanitti\PokemonBattle;
+use Ankanitti\PokemonBattle\Model\PokemonInterface;
 
 
 abstract class PokemonModel implements PokemonInterface

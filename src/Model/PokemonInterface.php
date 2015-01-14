@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlesBAP\PokemonBattle\Model;
+namespace Ankanitti\PokemonBattle\Model;
 
 interface PokemonInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace CharlesBAP\PokemonBattle;
+namespace Ankanitti\PokemonBattle;
 
 /**
  * Class Trainer
