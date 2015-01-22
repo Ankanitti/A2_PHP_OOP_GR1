@@ -4,7 +4,7 @@ namespace Ankanitti\PokemonBattle;
 
 /**
  * Class Trainer
- * @package CharlesBAP\PokemonBattle
+ * @package Ankanitti\PokemonBattle
  *
  * @Entity
  * @Table(name="trainer")
