@@ -43,7 +43,7 @@ class PokemonModel implements PokemonInterface
     /**
      * @var int
      *
-     * @Colum(name="hp", type="integer")
+     * @Column(name="hp", type="integer")
      */
     private $hp;
 
