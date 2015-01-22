@@ -31,14 +31,17 @@ $targetedPokemon = $pokemonRepository->findOneBy($criteria2);
 
 $strikerPokemonType = $strikerPokemon->getType();
 $targetedPokemonType = $targetedPokemon->getType();
+
 if(($strikerPokemonType = 0 && $targetedPokemonType = 2) ||
     ($strikerPokemonType = 1 && $targetedPokemonType = 0) ||
     ($strikerPokemonType = 2 && $targetedPokemonType = 1)){
     $pokemonAttack = mt_rand(5,10);
+
 }elseif(($strikerPokemonType = 2 && $targetedPokemonType = 0) ||
     ($strikerPokemonType = 0 && $targetedPokemonType = 1) ||
     ($strikerPokemonType = 1 && $targetedPokemonType = 2)){
     $pokemonAttack = mt_rand(15,30);
+
 }else{
     $pokemonAttack = mt_rand(10,20);
 }
@@ -77,7 +80,7 @@ if(empty($test_attack)) {
     ]);
 }else {
     if ($timestamp < $timestamp + 21600) {
-        echo $twig->render('error_time.html.twig', [
+        echo $twig->render('fail_timer.html.twig', [
             'isConnected' => $isConnected
         ]);
     } else {

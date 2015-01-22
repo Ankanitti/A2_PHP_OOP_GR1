@@ -20,10 +20,9 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
 }
 
 if(isset($_SESSION['connected'])) {
-    /**
-     * Pokemon Create
-     */
+
     if (null !== $pokemonName && null !== $pokemonType) {
+
         if ($pokemonType = '0') {
             $pokemon = new PokemonModel();
             $pokemon
@@ -31,9 +30,12 @@ if(isset($_SESSION['connected'])) {
                 ->setType(0)
                 ->setHP(100)
                 ->setTrainerId($_SESSION['id']);
+
             $em->persist($pokemon);
             $em->flush();
+
             echo '<div class="alert alert-success" role="alert">Fire pokemon created!</div>';
+
         } else if ($pokemonType = '1') {
             $pokemon = new PokemonModel();
             $pokemon
@@ -41,9 +43,12 @@ if(isset($_SESSION['connected'])) {
                 ->setType(1)
                 ->setHp(100)
                 ->setTrainerId($_SESSION['id']);
+
             $em->persist($pokemon);
             $em->flush();
+
             echo '<div class="alert alert-success" role="alert">Water pokemon created!</div>';
+
         } else {
             $pokemon = new PokemonModel();
             $pokemon
@@ -51,14 +56,18 @@ if(isset($_SESSION['connected'])) {
                 ->setType(2)
                 ->setHP(100)
                 ->setTrainerId($_SESSION['id']);
+
             $em->persist($pokemon);
             $em->flush();
+
             echo '<div class="alert alert-success" role="alert">Plant pokemon created!</div>';
         }
     }
+
 } else{
     header('Location: index.php');
 }
+
 echo $twig->render('new_pokemon.html.twig',[
     'isConnected' => $isConnected,
 ]);

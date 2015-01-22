@@ -8,7 +8,7 @@
             <ul class="list-group">
                 {% for trainer in trainers %}
 
-                    <li class="list-group-item">{{ trainer.username }} <a href="fight.php?defensorId={{ trainer.id }} "><button type="button" class="btn btn-primary">Battle him !</button></a></li>
+                    <li class="list-group-item">{{ trainer.username }} <a href="fight.php?targetedId={{ trainer.id }} "><button type="button" class="btn btn-primary">Battle him !</button></a></li>
 
                 {% endfor %}
             </ul>

@@ -20,7 +20,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
     ]);
 
 }else{
-    echo $twig->render('error_log.html.twig', [
+    echo $twig->render('fail_log.html.twig', [
         'isConnected' => $isConnected,
     ]);
 }

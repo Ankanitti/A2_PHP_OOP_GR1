@@ -1,6 +1,5 @@
 <?php
 
-
 require __DIR__.'/_header.php';
 
 /** @var \Doctrine\ORM\EntityManager $em */
@@ -11,18 +10,16 @@ use Ankanitti\PokemonBattle\Trainer;
 $username = !empty($_POST['username']) ? $_POST['username'] : null;
 $password = !empty($_POST['password']) ? $_POST['password'] : null;
 
-if(isset($_SESSION['connected'])) {
-
+if(!isset($_SESSION['connected'])) {
     if (null !== $username && null !== $password) {
-    /** @var \Doctrine\ORM\EntityRepository $trainerRepository */
+        /** @var \Doctrine\ORM\EntityRepository $trainerRepository */
         $trainerRepository = $em->getRepository('Ankanitti\PokemonBattle\Trainer');
 
-    /** @var Trainer|null $user */
+        /** @var Trainer|null $user */
         $trainer = $trainerRepository->findOneBy([
-        'username' => $username,
-        'password' => $password,
+            'username' => $username,
+            'password' => $password,
         ]);
-
 
         if (null !== $trainer) {
             $_SESSION['id'] = $trainer->getId();
@@ -31,8 +28,8 @@ if(isset($_SESSION['connected'])) {
             echo '<div class="alert alert-success" role="alert">Connected!</div>';
         }
     }
-}else{
+
+} else {
     header('Location: index.php');
 }
-
 echo $twig->render('login.html.twig');
