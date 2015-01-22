@@ -4,7 +4,14 @@ namespace Ankanitti\PokemonBattle;
 use Ankanitti\PokemonBattle\Model\PokemonInterface;
 
 
-abstract class PokemonModel implements PokemonInterface
+/**
+ * Class PokemonModel
+ * @package Ankanitti\PokemonBattle
+ *
+ * @Entity
+ * @Table(name="pokemon")
+ */
+class PokemonModel implements PokemonInterface
 {
     /* VARS */
 
@@ -177,13 +184,13 @@ abstract class PokemonModel implements PokemonInterface
      *
      * @return bool
      */
-    abstract public function isTypeWeak($type);
+    //abstract public function isTypeWeak($type);
 
     /**
      * @param int $type
      * @return bool
      */
-    abstract public function isTypeStrong($type);
+    //abstract public function isTypeStrong($type);
 
 
 }
