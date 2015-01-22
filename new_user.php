@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Charles
- * Date: 13/01/2015
- * Time: 14:32
- */
+
+
 require __DIR__.'/_header.php';
 
 

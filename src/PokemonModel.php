@@ -6,6 +6,26 @@ use Ankanitti\PokemonBattle\Model\PokemonInterface;
 
 abstract class PokemonModel implements PokemonInterface
 {
+    /* VARS */
+
+    /**
+     * @var int
+     *
+     * @Id
+     *
+     * @GeneratedValue(strategy="AUTO")
+     *
+     * @Column(name="id", type="integer")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @Column(name="trainerId", type="integer")
+     */
+    private $trainerId;
+
     /**
      * @var string
      */
@@ -24,9 +44,24 @@ abstract class PokemonModel implements PokemonInterface
     const TYPE_FIRE     = 0;
     const TYPE_WATER    = 1;
     const TYPE_PLANT    = 2;
-    const TYPE_ELECTRIC = 3;
-    const TYPE_PSY      = 4;
-    const TYPE_NORMAL   = 5;
+
+    /* FUNCTIONS */
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $trainerId
+     */
+    public function setTrainerId($trainerId)
+    {
+        $this->trainerId = $trainerId;
+    }
 
     /**
      * @inheritdoc
@@ -129,9 +164,6 @@ abstract class PokemonModel implements PokemonInterface
                 self::TYPE_FIRE,
                 self::TYPE_WATER,
                 self::TYPE_PLANT,
-                self::TYPE_ELECTRIC,
-                self::TYPE_PSY,
-                self::TYPE_NORMAL,
             ]))
             $this->type = $type;
         else
@@ -152,4 +184,6 @@ abstract class PokemonModel implements PokemonInterface
      * @return bool
      */
     abstract public function isTypeStrong($type);
+
+
 }
