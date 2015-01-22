@@ -1,9 +1,13 @@
 <?php
 
 namespace Ankanitti\PokemonBattle\Type;
-
 use Ankanitti\PokemonBattle\PokemonModel;
 
+/**
+ * @ORM\Entity
+ * Class PokemonFire
+ * @package Ankanitti\PokemonBattle\Type
+ */
 abstract class PokemonWater extends PokemonModel
 {
     /**
