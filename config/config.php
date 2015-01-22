@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dbname'    => 'phpoop',
+    'dbname'    => 'pokebattle',
     'user'      => 'root',
     'password'  => '',
     'host'      => 'localhost',

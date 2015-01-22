@@ -11,7 +11,7 @@ require __DIR__.'/_header.php';
 /** @var \Doctrine\ORM\EntityManager $em */
 $em = require __DIR__.'/bootstrap.php';
 
-use CharlesBAP\PokemonBattle\Trainer;
+use Ankanitti\PokemonBattle\Trainer;
 
 $username = !empty($_POST['username']) ? $_POST['username'] : null;
 $password = !empty($_POST['password']) ? $_POST['password'] : null;
