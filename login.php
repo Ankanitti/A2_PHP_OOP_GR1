@@ -13,28 +13,24 @@ $password = !empty($_POST['password']) ? $_POST['password'] : null;
 
 if(isset($_SESSION['connected'])) {
 
-
-/**
- * Login
- */
-if (null !== $username && null !== $password) {
+    if (null !== $username && null !== $password) {
     /** @var \Doctrine\ORM\EntityRepository $trainerRepository */
-    $trainerRepository = $em->getRepository('Ankanitti\PokemonBattle\Trainer');
+        $trainerRepository = $em->getRepository('Ankanitti\PokemonBattle\Trainer');
 
     /** @var Trainer|null $user */
-    $trainer = $trainerRepository->findOneBy([
+        $trainer = $trainerRepository->findOneBy([
         'username' => $username,
         'password' => $password,
-    ]);
+        ]);
 
 
-    if (null !== $trainer) {
-        $_SESSION['id'] = $trainer->getId();
-        $_SESSION['username'] = $trainer->getUsername();
-        $_SESSION['connected'] = true;
-        echo '<div class="alert alert-success" role="alert">Connected!</div>';
+        if (null !== $trainer) {
+            $_SESSION['id'] = $trainer->getId();
+            $_SESSION['username'] = $trainer->getUsername();
+            $_SESSION['connected'] = true;
+            echo '<div class="alert alert-success" role="alert">Connected!</div>';
+        }
     }
-}
 }else{
     header('Location: index.php');
 }
