@@ -35,16 +35,22 @@ class PokemonModel implements PokemonInterface
 
     /**
      * @var string
+     *
+     * @Column(name="name", type="string", length=50, unique=true)
      */
     private $name;
 
     /**
      * @var int
+     *
+     * @Colum(name="hp", type="integer")
      */
     private $hp;
 
     /**
      * @var int
+     *
+     * @Column(name="type", type="integer")
      */
     private $type;
 
@@ -60,6 +66,14 @@ class PokemonModel implements PokemonInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTrainerId()
+    {
+        return $this->trainerId;
     }
 
     /**
