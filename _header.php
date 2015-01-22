@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Charles
- * Date: 13/01/2015
- * Time: 13:34
- */
 
 $config = include __DIR__.'/config/config.php';
 
