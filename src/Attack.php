@@ -91,7 +91,7 @@ class Attack implements AttackInterface
      */
     public function getTargetedPokemonName()
     {
-        return $this->targetedPokemonNamesorName;
+        return $this->targetedPokemonName;
     }
     /**
      * @param string $targetedPokemonName
