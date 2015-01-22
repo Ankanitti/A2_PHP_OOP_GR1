@@ -19,6 +19,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
     echo $twig->render('revive.html.twig',[
         'isConnected' => $isConnected,
     ]);
+
 }else{
     header('Location: index.php');
 }
