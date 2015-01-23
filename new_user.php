@@ -27,6 +27,8 @@ if (null !== $username && null !== $password) {
     $em->flush();
 
     echo 'Trainer created!';
+
+    header('Location:login.php');
 }
 
 

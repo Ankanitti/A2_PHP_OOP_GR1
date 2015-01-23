@@ -26,6 +26,8 @@ if(!isset($_SESSION['connected'])) {
             $_SESSION['username'] = $trainer->getUsername();
             $_SESSION['connected'] = true;
             echo '<div class="alert alert-success" role="alert">Connected!</div>';
+
+            header('Location: new_pokemon.php');
         }
     }
 
