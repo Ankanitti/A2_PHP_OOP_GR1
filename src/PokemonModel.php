@@ -193,18 +193,6 @@ class PokemonModel implements PokemonInterface
         return $this;
     }
 
-    /**
-     * @param int $type
-     *
-     * @return bool
-     */
-    //abstract public function isTypeWeak($type);
-
-    /**
-     * @param int $type
-     * @return bool
-     */
-    //abstract public function isTypeStrong($type);
 
 
 }
