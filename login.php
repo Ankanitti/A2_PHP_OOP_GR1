@@ -27,7 +27,8 @@ if(!isset($_SESSION['connected'])) {
             $_SESSION['connected'] = true;
             echo '<div class="alert alert-success" role="alert">Connected!</div>';
 
-            header('Location: checkpokemon.php');
+            header('Location: new_pokemon.php');
+
         }
     }
 

@@ -32,15 +32,15 @@ $targetedPokemon = $pokemonRepository->findOneBy($criteria2);
 $strikerPokemonType = $strikerPokemon->getType();
 $targetedPokemonType = $targetedPokemon->getType();
 
-if(($strikerPokemonType = 0 && $targetedPokemonType = 2) ||
-    ($strikerPokemonType = 1 && $targetedPokemonType = 0) ||
-    ($strikerPokemonType = 2 && $targetedPokemonType = 1)){
-    $pokemonAttack = mt_rand(5,10);
-
-}elseif(($strikerPokemonType = 2 && $targetedPokemonType = 0) ||
-    ($strikerPokemonType = 0 && $targetedPokemonType = 1) ||
-    ($strikerPokemonType = 1 && $targetedPokemonType = 2)){
+if(($strikerPokemonType = 2 && $targetedPokemonType = 4) ||
+    ($strikerPokemonType = 3 && $targetedPokemonType = 2) ||
+    ($strikerPokemonType = 4 && $targetedPokemonType = 3)){
     $pokemonAttack = mt_rand(15,30);
+
+}elseif(($strikerPokemonType = 2 && $targetedPokemonType = 3) ||
+    ($strikerPokemonType = 3 && $targetedPokemonType = 4) ||
+    ($strikerPokemonType = 4 && $targetedPokemonType = 2)){
+    $pokemonAttack = mt_rand(5,10);
 
 }else{
     $pokemonAttack = mt_rand(10,20);

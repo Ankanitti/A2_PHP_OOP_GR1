@@ -54,9 +54,9 @@ class PokemonModel implements PokemonInterface
      */
     private $type;
 
-    const TYPE_FIRE     = 0;
-    const TYPE_WATER    = 1;
-    const TYPE_PLANT    = 2;
+    const TYPE_FIRE     = 2;
+    const TYPE_WATER    = 3;
+    const TYPE_PLANT    = 4;
 
     /* FUNCTIONS */
 
@@ -112,7 +112,7 @@ class PokemonModel implements PokemonInterface
     /**
      * @inheritdoc
      */
-    public function getHP()
+    public function getHp()
     {
         return $this->hp;
     }
@@ -124,7 +124,7 @@ class PokemonModel implements PokemonInterface
      *
      * @throws \Exception
      */
-    public function setHP($hp)
+    public function setHp($hp)
     {
         if (is_int($hp) && $hp > 0)
             $this->hp = $hp;

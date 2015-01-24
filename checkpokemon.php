@@ -17,12 +17,14 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
     $criteria = array('trainerId' => $userId);
     $userPokemon = $pokemonRepository->findOneBy($criteria);
     $pokemonHp = $userPokemon->getHp();
+    $pokemonType = $userPokemon->getType();
 
     echo $twig->render('checkpokemon.html.twig',[
         'isConnected' => $isConnected,
         'userPokemon' => $userPokemon,
         'userName' => $userName,
-        'pokemonHp' => $pokemonHp
+        'pokemonHp' => $pokemonHp,
+        'pokemonType' => $pokemonType
     ]);
 
 }else{

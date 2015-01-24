@@ -24,7 +24,7 @@ interface PokemonInterface
     /**
      * @return int
      */
-    public function getHP();
+    public function getHp();
 
     /**
      * @param int $hp
