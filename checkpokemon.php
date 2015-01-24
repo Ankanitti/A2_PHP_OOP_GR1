@@ -13,6 +13,7 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
 
     $userName = $_SESSION['username'];
     $userId = $_SESSION['id'];
+
     $criteria = array('trainerId' => $userId);
     $userPokemon = $pokemonRepository->findOneBy($criteria);
     $pokemonHp = $userPokemon->getHp();
