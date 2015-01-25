@@ -18,13 +18,13 @@ if(isset($_SESSION['connected']) && $_SESSION['connected'] = true){
 
 if(isset($_SESSION['connected'])) {
 
-    if (null !== $pokemonName && null !== $pokemonType) {
-        if ($pokemonType = '2') {
+    if (isset($pokemonName) && isset($pokemonType)) {
+        if ($pokemonType = "1") {
 
             $pokemon = new PokemonModel();
             $pokemon
                 ->setName($pokemonName)
-                ->setType(2)
+                ->setType(PokemonModel::TYPE_FIRE)
                 ->setHP(100)
                 ->setTrainerId($_SESSION['id']);
 
@@ -33,12 +33,12 @@ if(isset($_SESSION['connected'])) {
 
             echo '<div class="alert alert-success" role="alert">Fire Pokemon created!</div>';
 
-        } else if ($pokemonType = '3') {
+        } else if ($pokemonType = "2") {
 
             $pokemon = new PokemonModel();
             $pokemon
                 ->setName($pokemonName)
-                ->setType(3)
+                ->setType(PokemonModel::TYPE_WATER)
                 ->setHp(100)
                 ->setTrainerId($_SESSION['id']);
 
@@ -47,12 +47,12 @@ if(isset($_SESSION['connected'])) {
 
             echo '<div class="alert alert-success" role="alert">Water Pokemon created!</div>';
 
-        } else {
+        } else if ($pokemonType = "3"){
 
             $pokemon = new PokemonModel();
             $pokemon
                 ->setName($pokemonName)
-                ->setType(4)
+                ->setType(PokemonModel::TYPE_PLANT)
                 ->setHP(100)
                 ->setTrainerId($_SESSION['id']);
 

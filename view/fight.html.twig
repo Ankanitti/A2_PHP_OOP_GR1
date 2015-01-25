@@ -10,7 +10,15 @@
                     <div class="alert alert-info" role="alert">
                         <h3>Striker</h3>
                         <p>Striker Pokemon is {{ strikerPokemon.name }}</p>
-                        <p>Type: {{ strikerPokemon.type }}</p>
+                        {% if strikerPokemon.type == 1 %}
+                            <p><em>Type</em>: Fire </p>
+                        {% endif %}
+                        {% if strikerPokemon.type == 2 %}
+                            <p><em>Type</em>: Water </p>
+                        {% endif %}
+                        {% if strikerPokemon.type == 3 %}
+                            <p><em>Type</em>: Plant </p>
+                        {% endif %}
                         <p>HP: {{ strikerPokemon.hp }}</p>
                     </div>
                 </div>
@@ -21,7 +29,15 @@
                     <div class="alert alert-warning" role="alert">
                         <h3>Target</h3>
                         <p>Targeted Pokemon is {{ targetedPokemon.name }}</p>
-                        <p>Type: {{ targetedPokemon.type }}</p>
+                        {% if targetedPokemon.type == 1 %}
+                            <p><em>Type</em>: Fire </p>
+                        {% endif %}
+                        {% if targetedPokemon.type == 2 %}
+                            <p><em>Type</em>: Water </p>
+                        {% endif %}
+                        {% if targetedPokemon.type == 3 %}
+                            <p><em>Type</em>: Plant </p>
+                        {% endif %}
                         <p>HP: {{ targetedPokemon.hp }}</p>
                     </div>
                 </div>

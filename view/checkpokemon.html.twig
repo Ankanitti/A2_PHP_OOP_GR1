@@ -9,13 +9,13 @@
                 <p class="text-center">Pokemon created by <strong>{{ userName }}</strong></p>
                 <p><em>Name</em>: {{ userPokemon.name }}</p>
                 <p><em>HP</em>: {{ userPokemon.hp }}</p>
-                {% if pokemonType == 2 %}
+                {% if pokemonType == 1 %}
                 <p><em>Type</em>: Fire </p>
                 {% endif %}
-                {% if pokemonType == 3 %}
+                {% if pokemonType == 2 %}
                     <p><em>Type</em>: Water </p>
                 {% endif %}
-                {% if pokemonType == 4 %}
+                {% if pokemonType == 3 %}
                     <p><em>Type</em>: Plant </p>
                 {% endif %}
             </div>

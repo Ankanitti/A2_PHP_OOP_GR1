@@ -32,14 +32,14 @@ $targetedPokemon = $pokemonRepository->findOneBy($criteria2);
 $strikerPokemonType = $strikerPokemon->getType();
 $targetedPokemonType = $targetedPokemon->getType();
 
-if(($strikerPokemonType = 2 && $targetedPokemonType = 4) ||
-    ($strikerPokemonType = 3 && $targetedPokemonType = 2) ||
-    ($strikerPokemonType = 4 && $targetedPokemonType = 3)){
+if(($strikerPokemonType = 1 && $targetedPokemonType = 3) ||
+    ($strikerPokemonType = 2 && $targetedPokemonType = 1) ||
+    ($strikerPokemonType = 3 && $targetedPokemonType = 2)){
     $pokemonAttack = mt_rand(15,30);
 
-}elseif(($strikerPokemonType = 2 && $targetedPokemonType = 3) ||
-    ($strikerPokemonType = 3 && $targetedPokemonType = 4) ||
-    ($strikerPokemonType = 4 && $targetedPokemonType = 2)){
+}else if(($strikerPokemonType = 1 && $targetedPokemonType = 2) ||
+    ($strikerPokemonType = 2 && $targetedPokemonType = 3) ||
+    ($strikerPokemonType = 3 && $targetedPokemonType = 1)){
     $pokemonAttack = mt_rand(5,10);
 
 }else{
@@ -76,7 +76,9 @@ if(empty($test_attack)) {
         'targetedPokemon' => $targetedPokemon,
         'pokemonAttack' => $pokemonAttack,
         'targetedHp' => $targetedHp,
-        'isConnected' => $isConnected
+        'isConnected' => $isConnected,
+        'strikerPokemonType' => $strikerPokemonType,
+        'targetedPokemonType' => $targetedPokemonType
     ]);
 }else {
     if ($timestamp < $timestamp + 21600) {
@@ -97,7 +99,9 @@ if(empty($test_attack)) {
             'targetedPokemon' => $targetedPokemon,
             'pokemonAttack' => $pokemonAttack,
             'targetedHp' => $targetedHp,
-            'isConnected' => $isConnected
+            'isConnected' => $isConnected,
+            'strikerPokemonType' => $strikerPokemonType,
+            'targetedPokemonType' => $targetedPokemonType
         ]);
     }
 }

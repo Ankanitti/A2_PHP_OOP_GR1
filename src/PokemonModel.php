@@ -54,9 +54,9 @@ class PokemonModel implements PokemonInterface
      */
     private $type;
 
-    const TYPE_FIRE     = 2;
-    const TYPE_WATER    = 3;
-    const TYPE_PLANT    = 4;
+    const TYPE_FIRE     = 1;
+    const TYPE_WATER    = 2;
+    const TYPE_PLANT    = 3;
 
     /* FUNCTIONS */
 
